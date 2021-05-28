@@ -19,6 +19,7 @@ class MyFrame(wx.Frame):
         b2 = wx.Button(parent=panel, id=11, label='button2', pos=(100,85))
         self.Bind(wx.EVT_BUTTON, self.on_click, b1)  # 绑定事件，self是当前窗口对象，第一个参数是事件类型，第二个参数是事件处理者，第三个参数是事件源
         self.Bind(wx.EVT_BUTTON, self.on_click, id=11)
+        # self.Bind(wx.EVT_BUTTON, self.on_click, id=10, id2=20)    # 表示id在10-20之间的都被绑定到on_click事件处理者上
 
     def on_click(self, event):
         event_id = event.GetId()
